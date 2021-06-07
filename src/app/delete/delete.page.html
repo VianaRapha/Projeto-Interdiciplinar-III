@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>delete</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item-sliding *ngFor="let card of cards | async">
+  
+  <ion-card>
+    <h1>{{card.targetLanguage}}</h1>
+    <h1>{{card.motherLanguage}}</h1>
+    <ion-button (click)="delete(card.key)" 
+    expand="block" 
+    color="danger">
+      Deletar
+    </ion-button>
+  </ion-card>
+</ion-item-sliding>
+<ion-button expand="block" color="tertiary" href="/home">Voltar</ion-button>
+<!-- <p>Essa é a pag de delete</p> -->
+</ion-content>
